@@ -1,22 +1,26 @@
+var _ = require("lodash");
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+console.log("answer:", _.without(array, 3));
+
 //Newer modern way to write the code (this new syntax will be explored in Advanced JS section)
-const css = document.querySelector('h3');
-const [color1, color2] = document.querySelectorAll('.color')
-const body = document.querySelector('#gradient');
+const css = document.querySelector("h3");
+const [color1, color2] = document.querySelectorAll(".color");
+const body = document.querySelector("#gradient");
 
 setGradient = () => {
-	body.style.background = _linearGradient();
-	css.textContent = `${body.style.background};`;
-}
-
-
+  body.style.background = _linearGradient();
+  css.textContent = `${body.style.background};`;
+};
 
 _linearGradient = () => {
-	return `linear-gradient(to right, ${color1.value}, ${color2.value})`;
-}
+  return `linear-gradient(to right, ${color1.value}, ${color2.value})`;
+};
 
-color1.addEventListener('input', setGradient);
+color1.addEventListener("input", setGradient);
 
-color2.addEventListener('input', setGradient);
+color2.addEventListener("input", setGradient);
 
 //Original version:
 // var css = document.querySelector("h3");
@@ -25,11 +29,11 @@ color2.addEventListener('input', setGradient);
 // var body = document.getElementById("gradient");
 
 // function setGradient() {
-// 	body.style.background = 
-// 	"linear-gradient(to right, " 
-// 	+ color1.value 
-// 	+ ", " 
-// 	+ color2.value 
+// 	body.style.background =
+// 	"linear-gradient(to right, "
+// 	+ color1.value
+// 	+ ", "
+// 	+ color2.value
 // 	+ ")";
 
 // 	css.textContent = body.style.background + ";";
@@ -37,4 +41,4 @@ color2.addEventListener('input', setGradient);
 
 // color1.addEventListener("input", setGradient);
 
-// color2.addEventListener("input", setGradient); 
+// color2.addEventListener("input", setGradient);
